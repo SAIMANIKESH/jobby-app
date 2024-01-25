@@ -1,0 +1,70 @@
+.similar-job-list-item {
+  list-style-type: none;
+  margin-right: 3%;
+}
+
+.sj-job-item-view {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  background-color: #272727;
+  border-radius: 20px;
+  padding: 30px 40px 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sj-gold {
+  color: #fbbf24;
+  width: 28px;
+  height: 25px;
+}
+
+.sj-rating {
+  color: #f8fafc;
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.sj-company-description {
+  height: 600px;
+  overflow-y: auto;
+  color: #f8fafc;
+  font-weight: 400;
+  line-height: 2;
+  font-size: 20px;
+  width: 21vw;
+  margin-top: 0px;
+}
+
+.company-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sj-detail-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sj-size {
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.sj-company-detail {
+  color: #f8fafc;
+  font-weight: 400;
+  line-height: 2;
+  font-size: 20px;
+}
+
+.sj-spacing-left {
+  margin-left: 25px;
+}

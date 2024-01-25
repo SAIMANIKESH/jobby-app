@@ -1,0 +1,278 @@
+.jobs-route {
+  display: flex;
+  flex-direction: row;
+  background-color: #000000;
+  min-height: 100vh;
+  min-width: 95vw;
+  padding: 3%;
+  font-family: 'roboto';
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  padding: 0% 1% 0%;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  padding: 40px 40px 20px;
+  border-radius: 25px;
+  margin-bottom: 22px;
+}
+
+.profile-img {
+  width: 65px;
+  height: 65px;
+}
+
+.profile-name {
+  color: #6366f1;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.profile-description {
+  color: #475569;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 30vw;
+  font-size: 16px;
+}
+
+.failure-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.retry-button {
+  color: #ffffff;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 28px 12px;
+  font-family: 'roboto';
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.hr-line {
+  width: 100%;
+  height: 2px;
+  background-color: #64748b;
+  border-radius: 2px;
+  border: none;
+}
+
+.jobs-filter-heading {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 21px;
+}
+
+.jobs-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.filter-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+.jobs-input-element {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.label-element {
+  color: #ffffff;
+  margin-left: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.jobs-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0% 2% 0%;
+  width: 60vw;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  width: 31vw;
+  border: 2px solid #64748b;
+  border-radius: 6px;
+}
+
+.search-element {
+  width: 85%;
+  padding: 6px;
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: 'roboto';
+}
+
+.search-button {
+  background-color: #272727;
+  border: none;
+  padding: 12px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  width: 15%;
+}
+
+.react-icons {
+  width: 19px;
+  height: 19px;
+  color: #ffffff;
+}
+
+.link-item {
+  text-decoration: none;
+}
+
+.jobs-list-item {
+  list-style-type: none;
+}
+
+.jobs-item-view {
+  display: flex;
+  flex-direction: column;
+  background-color: #272727;
+  border-radius: 15px;
+  padding: 2% 4% 1%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.job-company-logo-img {
+  width: 80px;
+  height: 85px;
+}
+
+.company-title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.company-title-heading {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.rating-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.gold {
+  color: #fbbf24;
+  width: 28px;
+  height: 25px;
+}
+
+.rating {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 22px;
+  margin-left: 6px;
+}
+
+.company-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.size {
+  width: 28px;
+  height: 28px;
+}
+
+.details-title {
+  color: #f8fafc;
+  margin-left: 10px;
+  margin-right: 25px;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.package-title-heading {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.spacing {
+  margin-top: 12px;
+  margin-left: 0px;
+}
+
+.spacing-top {
+  margin-top: 110px;
+  flex-direction: column;
+}
+
+.failure-view-heading {
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.failure-view-description {
+  color: #f1f5f9;
+  font-size: 14px;
+}
