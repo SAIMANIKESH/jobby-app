@@ -9,7 +9,7 @@ import NotFound from './components/NotFound'
 
 import './App.css'
 
-// These are the lists used in the application. You can move them to any component needed.
+/* / These are the lists used in the application. You can move them to any component needed.
 const employmentTypesList = [
   {
     label: 'Full Time',
@@ -46,7 +46,7 @@ const salaryRangesList = [
     salaryRangeId: '4000000',
     label: '40 LPA and above',
   },
-]
+] */
 
 // Replace your code here
 const App = () => (
@@ -54,13 +54,7 @@ const App = () => (
     <Switch>
       <Route exact path="/login" component={Login} />
       <ProtectedRoute exact path="/" component={Home} />
-      <ProtectedRoute
-        exact
-        path="/jobs"
-        component={Jobs}
-        employmentTypesList={employmentTypesList}
-        salaryRangesList={salaryRangesList}
-      />
+      <ProtectedRoute exact path="/jobs" component={Jobs} />
       <ProtectedRoute exact path="/jobs/:id" component={JobItem} />
       <Route exact path="/not-found" component={NotFound} />
       <Redirect to="/not-found" />
