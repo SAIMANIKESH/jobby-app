@@ -11,33 +11,33 @@ import Header from '../Header'
 
 import './index.css'
 
-/* const employmentTypesList1 = [
-  {
-    label: 'Full Time',
-    employmentTypeId: 'FULLTIME',
-    isChecked: false,
-  },
-  {
-    label: 'Part Time',
-    employmentTypeId: 'PARTTIME',
-    isChecked: false,
-  },
-  {
-    label: 'Freelance',
-    employmentTypeId: 'FREELANCE',
-    isChecked: false,
-  },
-  {
-    label: 'Internship',
-    employmentTypeId: 'INTERNSHIP',
-    isChecked: false,
-  },
-] */
-
 const employmentTypesList = [
   {
     label: 'Full Time',
     employmentTypeId: 'FULLTIME',
+    isChecked: false,
+  },
+  {
+    label: 'Part Time',
+    employmentTypeId: 'PARTTIME',
+    isChecked: false,
+  },
+  {
+    label: 'Freelance',
+    employmentTypeId: 'FREELANCE',
+    isChecked: false,
+  },
+  {
+    label: 'Internship',
+    employmentTypeId: 'INTERNSHIP',
+    isChecked: false,
+  },
+]
+
+/* const employmentTypesList = [
+  {
+    label: 'Full Time',
+    employmentTypeId: 'FULLTIME',
   },
   {
     label: 'Part Time',
@@ -51,7 +51,7 @@ const employmentTypesList = [
     label: 'Internship',
     employmentTypeId: 'INTERNSHIP',
   },
-]
+] */
 
 const salaryRangesList = [
   {
@@ -326,23 +326,26 @@ class Jobs extends Component {
     const {label, employmentTypeId} = prop
 
     const onClickOption = () => {
-      /* const index = employmentTypesList1.findIndex(
+      const index = employmentTypesList.findIndex(
         eachItem => eachItem.employmentTypeId === employmentTypeId,
       )
-      employmentTypesList1[index].isChecked = !employmentTypesList1[index]
+      employmentTypesList[index].isChecked = !employmentTypesList[index]
         .isChecked
-      const filteredResult = employmentTypesList1.filter(
+      const filteredResult = employmentTypesList.filter(
         eachItem => eachItem.isChecked === true,
       )
-      const result = filteredResult.map(eachItem => eachItem.employmentTypeId) 
-      //---> output for 'result' will be like this: ['PARTTIME', 'FREELANCE']  */
+      const result = filteredResult.map(eachItem => eachItem.employmentTypeId)
 
-      this.setState(
+      // ---> output for 'result' will be like this: ['PARTTIME', 'FREELANCE']
+
+      this.setState({employmentType: result}, this.getJobsDetails)
+
+      /* this.setState(
         prevState => ({
           employmentType: [...prevState.employmentType, employmentTypeId],
         }),
         this.getJobsDetails,
-      )
+      ) */
     }
 
     return (
