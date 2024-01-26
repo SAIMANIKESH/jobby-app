@@ -11,7 +11,7 @@ import Header from '../Header'
 
 import './index.css'
 
-/* const employmentTypesList = [
+/* const employmentTypesList1 = [
   {
     label: 'Full Time',
     employmentTypeId: 'FULLTIME',
@@ -130,7 +130,7 @@ class Jobs extends Component {
     this.setState({apiJobsStatus: apiStatusConstants.inProgress})
 
     const {employmentType, minimumPackage, search} = this.state
-    console.log(employmentType)
+    // console.log(employmentType)
     const employmentTypes = employmentType.join(',')
 
     const token = Cookies.get('jwt_token')
@@ -326,15 +326,16 @@ class Jobs extends Component {
     const {label, employmentTypeId} = prop
 
     const onClickOption = () => {
-      /* const index = employmentTypesList.findIndex(
+      /* const index = employmentTypesList1.findIndex(
         eachItem => eachItem.employmentTypeId === employmentTypeId,
       )
-      employmentTypesList[index].isChecked = !employmentTypesList[index]
+      employmentTypesList1[index].isChecked = !employmentTypesList1[index]
         .isChecked
-      const filteredResult = employmentTypesList.filter(
+      const filteredResult = employmentTypesList1.filter(
         eachItem => eachItem.isChecked === true,
       )
-      const result = filteredResult.map(eachItem => eachItem.employmentTypeId) */
+      const result = filteredResult.map(eachItem => eachItem.employmentTypeId) 
+      //---> output for 'result' will be like this: ['PARTTIME', 'FREELANCE']  */
 
       this.setState(
         prevState => ({
