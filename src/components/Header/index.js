@@ -1,7 +1,7 @@
 import {Link, withRouter} from 'react-router-dom'
 import {TiHome} from 'react-icons/ti'
 import {BsBriefcaseFill} from 'react-icons/bs'
-import {LuLogOut} from 'react-icons/lu'
+import {FiLogOut} from 'react-icons/fi'
 import Cookies from 'js-cookie'
 
 import './index.css'
@@ -40,7 +40,7 @@ const Header = props => {
             className="sm-page nav-button"
           >
             {' '}
-            <LuLogOut className="nav-bar-image" />
+            <FiLogOut className="nav-bar-image" />
           </button>
         </li>
       </ul>

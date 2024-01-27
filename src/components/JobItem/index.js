@@ -1,5 +1,3 @@
-/* eslint-disable camelcase */
-
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
@@ -78,7 +76,7 @@ class JobItem extends Component {
       }))
 
       const formattedData = {
-        company_logo_url: jobDetails.company_logo_url,
+        companyLogoUrl: jobDetails.company_logo_url,
         companyWebsiteUrl: jobDetails.company_website_url,
         employmentType: jobDetails.employment_type,
         id: jobDetails.id,
@@ -146,7 +144,7 @@ class JobItem extends Component {
   renderJobItemView = () => {
     const {jobItemData} = this.state
     const {
-      company_logo_url,
+      companyLogoUrl,
       companyWebsiteUrl,
       employmentType,
       jobDescription,
@@ -166,7 +164,7 @@ class JobItem extends Component {
         <div className="job-item-view">
           <div className="company-logo-view">
             <img
-              src={company_logo_url}
+              src={companyLogoUrl}
               alt="job details company logo"
               className="job-item-company-logo-img"
             />
@@ -189,7 +187,7 @@ class JobItem extends Component {
           </div>
           <hr className="hr-line-lg" />
           <div className="about-link-section">
-            <p className="job-item-heading-lg">Description</p>
+            <h1 className="job-item-heading-lg">Description</h1>
             <a href={companyWebsiteUrl} className="link-item">
               <p className="visit-link">
                 Visit <FiExternalLink className="react-icons size blue" />

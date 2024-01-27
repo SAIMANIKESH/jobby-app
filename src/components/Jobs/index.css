@@ -147,6 +147,8 @@
 }
 
 .search-button {
+  cursor: pointer;
+  outline: none;
   background-color: #272727;
   border: none;
   padding: 12px;

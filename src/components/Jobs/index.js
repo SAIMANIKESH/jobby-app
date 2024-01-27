@@ -34,41 +34,26 @@ const employmentTypesList = [
   },
 ]
 
-/* const employmentTypesList = [
-  {
-    label: 'Full Time',
-    employmentTypeId: 'FULLTIME',
-  },
-  {
-    label: 'Part Time',
-    employmentTypeId: 'PARTTIME',
-  },
-  {
-    label: 'Freelance',
-    employmentTypeId: 'FREELANCE',
-  },
-  {
-    label: 'Internship',
-    employmentTypeId: 'INTERNSHIP',
-  },
-] */
-
 const salaryRangesList = [
   {
     salaryRangeId: '1000000',
     label: '10 LPA and above',
+    isChecked: false,
   },
   {
     salaryRangeId: '2000000',
     label: '20 LPA and above',
+    isChecked: false,
   },
   {
     salaryRangeId: '3000000',
     label: '30 LPA and above',
+    isChecked: false,
   },
   {
     salaryRangeId: '4000000',
     label: '40 LPA and above',
+    isChecked: false,
   },
 ]
 
@@ -86,7 +71,7 @@ class Jobs extends Component {
     jobsData: [],
     apiJobsStatus: apiStatusConstants.initial,
     employmentType: [],
-    minimumPackage: '',
+    minimumPackage: [],
     search: '',
   }
 
@@ -130,18 +115,18 @@ class Jobs extends Component {
     this.setState({apiJobsStatus: apiStatusConstants.inProgress})
 
     const {employmentType, minimumPackage, search} = this.state
-    // console.log(employmentType)
     const employmentTypes = employmentType.join(',')
+    const minimumPackages = minimumPackage.join(',')
 
     const token = Cookies.get('jwt_token')
-    const url = `https://apis.ccbp.in/jobs?employment_type=${employmentTypes}&minimum_package=${minimumPackage}&search=${search}`
+    const url = `https://apis.ccbp.in/jobs?employment_type=${employmentTypes}&minimum_package=${minimumPackages}&search=${search}`
     const options = {
       headers: {
         Authorization: `Bearer ${token}`,
       },
       method: 'GET',
     }
-
+    console.log(url)
     const response = await fetch(url, options)
     const data = await response.json()
 
@@ -227,8 +212,8 @@ class Jobs extends Component {
     } = prop
 
     return (
-      <Link to={`/jobs/${id}`} className="link-item">
-        <li key={id} className="jobs-list-item">
+      <li key={id} className="jobs-list-item">
+        <Link to={`/jobs/${id}`} className="link-item">
           <div className="jobs-item-view">
             <div className="company-logo">
               <img
@@ -254,11 +239,11 @@ class Jobs extends Component {
               <p className="package-title-heading">{packagePerAnnum}</p>
             </div>
             <hr className="hr-line" />
-            <p className="rating spacing">Description</p>
+            <h1 className="rating spacing">Description</h1>
             <p className="details-title spacing">{jobDescription}</p>
           </div>
-        </li>
-      </Link>
+        </Link>
+      </li>
     )
   }
 
@@ -326,26 +311,28 @@ class Jobs extends Component {
     const {label, employmentTypeId} = prop
 
     const onClickOption = () => {
-      const index = employmentTypesList.findIndex(
+      /* const index = employmentTypesList.findIndex(
         eachItem => eachItem.employmentTypeId === employmentTypeId,
       )
       employmentTypesList[index].isChecked = !employmentTypesList[index]
         .isChecked
-      const filteredResult = employmentTypesList.filter(
+      const filteredEmploymentResult = employmentTypesList.filter(
         eachItem => eachItem.isChecked === true,
       )
-      const result = filteredResult.map(eachItem => eachItem.employmentTypeId)
+      const employmentResult = filteredEmploymentResult.map(
+        eachItem => eachItem.employmentTypeId,
+      )
 
       // ---> output for 'result' will be like this: ['PARTTIME', 'FREELANCE']
 
-      this.setState({employmentType: result}, this.getJobsDetails)
+      this.setState({employmentType: employmentResult}, this.getJobsDetails) */
 
-      /* this.setState(
+      this.setState(
         prevState => ({
           employmentType: [...prevState.employmentType, employmentTypeId],
         }),
         this.getJobsDetails,
-      ) */
+      )
     }
 
     return (
@@ -368,7 +355,28 @@ class Jobs extends Component {
     const {label, salaryRangeId} = prop
 
     const onClickOption = () => {
-      this.setState({minimumPackage: salaryRangeId}, this.getJobsDetails)
+      /* const index = salaryRangesList.findIndex(
+        eachItem => eachItem.salaryRangeId === salaryRangeId,
+      )
+      salaryRangesList[index].isChecked = !salaryRangesList[index].isChecked
+      const filteredSalaryResult = salaryRangesList.filter(
+        eachItem => eachItem.isChecked === true,
+      )
+      const salaryResult = filteredSalaryResult.map(
+        eachItem => eachItem.salaryRangeId,
+      )
+
+      this.setState(
+        {minimumPackage: salaryResult.join(',')},
+        this.getJobsDetails,
+      ) */
+
+      this.setState(
+        prevState => ({
+          minimumPackage: [...prevState.minimumPackage, salaryRangeId],
+        }),
+        this.getJobsDetails,
+      )
     }
 
     return (

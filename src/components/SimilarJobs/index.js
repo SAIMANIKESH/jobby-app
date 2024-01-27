@@ -21,7 +21,7 @@ const SimilarJobs = props => {
         <div className="company-logo">
           <img
             src={companyLogoUrl}
-            alt="company logo"
+            alt="similar job company logo"
             className="job-company-logo-img"
           />
           <div className="company-title">
@@ -32,7 +32,7 @@ const SimilarJobs = props => {
             </div>
           </div>
         </div>
-        <p className="sj-rating">Description</p>
+        <h1 className="sj-rating">Description</h1>
         <p className="sj-company-description">{jobDescription}</p>
         <div className="company-details">
           <div className="sj-detail-section">
